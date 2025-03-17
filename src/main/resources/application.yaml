@@ -1,0 +1,35 @@
+server:
+  port: 8085
+  servlet:
+    context-path: '/Culinary-delivery-service/'
+
+spring:
+  application:
+    name: Culinary-delivery-service
+  datasource:
+    url:  jdbc:postgresql://localhost:5432/Culinary-delivery
+    username: postgres
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      jdbc:
+        lob.non-contextual-creation: true
+    properties:
+      hibernate:
+        show_sql: true
+  output:
+    ansi:
+      enabled: Always
+  rabbitmq:
+      addresses: amqps://gxfhiqck:3sivG1zlLvv3W7SWQcK14y010juFScxm@leopard.lmq.cloudamqp.com/gxfhiqck
+
+
+Culinary:
+  broker:
+    exchange:
+      deliverymanEvent: Culinary.deliverymanEvent
+    queue:
+      deliverymanEventQueue:
+        name: Culinary.deliverymanEvent.Deliveryman
