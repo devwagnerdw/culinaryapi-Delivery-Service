@@ -1,5 +1,6 @@
 package com.culinaryapi.Delivery.Service.models;
 
+import com.culinaryapi.Delivery.Service.enums.Vehicle;
 import jakarta.persistence.*;
 
 import java.util.UUID;
@@ -14,7 +15,7 @@ public class DeliverymanModel {
     private String fullName;
     private String phoneNumber;
     private String userStatus;
-    private String vehicle;
+    private Vehicle vehicle;
     private boolean available;
 
     public UUID getUserId() {
@@ -57,11 +58,11 @@ public class DeliverymanModel {
         this.userStatus = userStatus;
     }
 
-    public String getVehicle() {
+    public Vehicle getVehicle() {
         return vehicle;
     }
 
-    public void setVehicle(String vehicle) {
+    public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
 
