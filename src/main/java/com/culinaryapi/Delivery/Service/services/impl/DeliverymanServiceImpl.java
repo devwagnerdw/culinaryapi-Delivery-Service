@@ -42,6 +42,7 @@ public class DeliverymanServiceImpl implements DeliverymanService {
         DeliverymanModel deliverymanModel = deliverymanRepository.findById(vehicleDto.getUserId())
                 .orElseThrow(() -> new NotFoundException("User not found: " + vehicleDto.getUserId()));
         deliverymanModel.setVehicle(vehicleDto.getVehicle());
+        deliverymanModel.setAvailable(true);
         deliverymanRepository.save(deliverymanModel);
         return ResponseEntity.status(HttpStatus.OK).body(DeliverymanMapper.toDto(deliverymanModel));
     }

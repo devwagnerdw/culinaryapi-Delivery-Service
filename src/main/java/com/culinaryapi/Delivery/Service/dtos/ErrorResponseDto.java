@@ -13,7 +13,6 @@ public class ErrorResponseDto {
         this.statusCode = builder.statusCode;
     }
 
-    // Getters
     public String getMessage() {
         return message;
     }
