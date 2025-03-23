@@ -36,7 +36,6 @@ public class UserConsumer {
         switch (ActionType.valueOf(userEventDto.getActionType())){
             case CREATE:
             case UPDATE:
-                System.out.println("deliveryman.service.event");
                 deliverymanService.save(deliveryman);
                 break;
             case DELETE:
