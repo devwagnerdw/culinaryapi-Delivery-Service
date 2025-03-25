@@ -1,7 +1,9 @@
 package com.culinaryapi.Delivery.Service.models;
 
+import com.culinaryapi.Delivery.Service.dtos.DeliveryEventDto;
 import com.culinaryapi.Delivery.Service.enums.OrderStatus;
 import jakarta.persistence.*;
+import org.springframework.beans.BeanUtils;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -95,5 +97,12 @@ public class DeliveryModel {
 
     public void setDeliveryman(DeliverymanModel deliveryman) {
         this.deliveryman = deliveryman;
+    }
+
+    public DeliveryEventDto convertToDeliveryEventDto() {
+        var deliveryEventDto= new DeliveryEventDto();
+        BeanUtils.copyProperties(this, deliveryEventDto);
+        return deliveryEventDto;
+
     }
 }

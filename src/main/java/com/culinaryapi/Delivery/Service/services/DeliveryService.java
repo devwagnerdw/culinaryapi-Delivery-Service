@@ -1,6 +1,7 @@
 package com.culinaryapi.Delivery.Service.services;
 
 import com.culinaryapi.Delivery.Service.dtos.AssignDeliveryDto;
+import com.culinaryapi.Delivery.Service.dtos.UpdateOrderStatusDto;
 import com.culinaryapi.Delivery.Service.models.DeliveryModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,4 +14,6 @@ public interface DeliveryService {
     ResponseEntity<Page<DeliveryModel>> getAvailableDeliveries(Pageable pageable);
 
     ResponseEntity<Object> assignDeliveryToDeliveryman(AssignDeliveryDto assignDeliveryDto);
+
+    ResponseEntity<Object> updateStatusOrder(UpdateOrderStatusDto updateOrderStatusDto);
 }

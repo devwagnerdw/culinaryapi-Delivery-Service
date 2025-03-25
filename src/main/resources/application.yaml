@@ -29,7 +29,8 @@ spring:
 Culinary:
   broker:
     exchange:
-      deliverymanEvent: Culinary.deliverymanEvent
+      deliverymanEventExchange: Culinary.deliverymanEvent
+      deliveryEventExchange: Culinary.deliveryEvent
       orderServiceEventExchange: Culinary.OrderService
     queue:
       deliverymanEventQueue:

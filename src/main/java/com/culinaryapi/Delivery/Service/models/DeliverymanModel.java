@@ -1,7 +1,9 @@
 package com.culinaryapi.Delivery.Service.models;
 
+import com.culinaryapi.Delivery.Service.dtos.DeliveryEventDto;
 import com.culinaryapi.Delivery.Service.enums.Vehicle;
 import jakarta.persistence.*;
+import org.springframework.beans.BeanUtils;
 
 import java.util.UUID;
 

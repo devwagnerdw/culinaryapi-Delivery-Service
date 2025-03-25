@@ -27,7 +27,7 @@ public class UserConsumer {
     @RabbitListener(bindings = @QueueBinding(
             value = @Queue(value = "${Culinary.broker.queue.deliverymanEventQueue.name}", durable = "true"),
             exchange = @Exchange(
-                    value = "${Culinary.broker.exchange.deliverymanEvent}",
+                    value = "${Culinary.broker.exchange.deliverymanEventExchange}",
                     type = ExchangeTypes.DIRECT,
                     ignoreDeclarationExceptions = "true"
             ),

@@ -1,6 +1,7 @@
 package com.culinaryapi.Delivery.Service.controllers;
 
 import com.culinaryapi.Delivery.Service.dtos.AssignDeliveryDto;
+import com.culinaryapi.Delivery.Service.dtos.UpdateOrderStatusDto;
 import com.culinaryapi.Delivery.Service.models.DeliveryModel;
 import com.culinaryapi.Delivery.Service.services.DeliveryService;
 import com.culinaryapi.Delivery.Service.services.DeliverymanService;
@@ -33,7 +34,8 @@ public class DeliveryController {
       return  deliveryService.assignDeliveryToDeliveryman(assignDeliveryDto);
     }
 
-
-
-
+    @PostMapping()
+    public  ResponseEntity<Object> updateStatusOrder(@RequestBody UpdateOrderStatusDto updateOrderStatusDto){
+        return deliveryService.updateStatusOrder(updateOrderStatusDto);
+    }
 }

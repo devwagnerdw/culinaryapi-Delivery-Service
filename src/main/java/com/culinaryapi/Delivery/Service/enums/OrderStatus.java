@@ -8,5 +8,4 @@ public enum OrderStatus {
     OUT_FOR_DELIVERY,   // Pedido foi retirado pelo entregador e está a caminho.
     DELIVERED,          // Pedido entregue com sucesso.
     CANCELLED,          // Pedido foi cancelado pelo cliente ou restaurante.
-    FAILED              // Falha no processamento do pedido (exemplo: pagamento não aprovado).
 }
