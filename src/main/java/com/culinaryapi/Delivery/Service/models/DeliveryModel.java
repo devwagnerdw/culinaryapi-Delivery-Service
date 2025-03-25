@@ -19,7 +19,6 @@ public class DeliveryModel {
     private BigDecimal totalAmount;
     private String fullName;
     private String phoneNumber;
-    private String actionType;
     private String address;
     @ManyToOne
     @JoinColumn(name = "deliveryman_id")
@@ -80,14 +79,6 @@ public class DeliveryModel {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getActionType() {
-        return actionType;
-    }
-
-    public void setActionType(String actionType) {
-        this.actionType = actionType;
     }
 
     public String getAddress() {
