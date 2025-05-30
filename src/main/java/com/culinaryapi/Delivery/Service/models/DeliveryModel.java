@@ -17,6 +17,7 @@ public class DeliveryModel {
 
     private UUID orderId;
     private UUID userId;
+    @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
     private BigDecimal totalAmount;
     private String fullName;

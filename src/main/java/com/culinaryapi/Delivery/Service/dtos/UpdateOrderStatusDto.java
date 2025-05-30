@@ -1,7 +1,5 @@
 package com.culinaryapi.Delivery.Service.dtos;
 
-import com.culinaryapi.Delivery.Service.enums.OrderStatus;
-
 import java.util.UUID;
 
 public class UpdateOrderStatusDto {

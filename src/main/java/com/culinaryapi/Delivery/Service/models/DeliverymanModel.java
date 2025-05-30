@@ -17,6 +17,7 @@ public class DeliverymanModel {
     private String fullName;
     private String phoneNumber;
     private String userStatus;
+    @Enumerated(EnumType.STRING)
     private Vehicle vehicle;
     private boolean available;
 

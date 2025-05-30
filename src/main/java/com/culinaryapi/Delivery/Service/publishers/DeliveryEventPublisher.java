@@ -24,7 +24,6 @@ public class DeliveryEventPublisher {
     public void publishOrderEvent(DeliveryEventDto deliveryEventDto, ActionType actionType) {
         deliveryEventDto.setActionType(actionType.toString());
         rabbitTemplate.convertAndSend(exchangeDeliveryEvent, "delivery.service.event", deliveryEventDto);
-        System.out.println("paseei aquiii"+ deliveryEventDto.getOrderStatus().toString());
     }
 
 }
